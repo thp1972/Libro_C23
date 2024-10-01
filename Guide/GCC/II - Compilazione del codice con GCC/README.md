@@ -2,12 +2,12 @@
 
 Per questo tutorial sulla fase di compilazione useremo un canonico listato che stamperà a video il messaggio `Hello, C programmers!` (Listato G.1).
 
-[!NOTA]
-Per compilare ed eseguire direttamente i listati e gli snippet di codice creare la seguente struttura “parlante” di directory, posta a partire dalla directory *home* del sistema operativo scelto (per noi sarà GNU/Linux): `MY_C_SOURCES`, `MY_C_BINARIES`, `MY_C_OBJECTS`, `MY_C_INCLUDE`, `MY_C_STATIC_LIBRARIES`, `MY_C_SHARED_LIBRARIES`, `MY_C_FILES`. Tale struttura non è obbligatoria ma è consigliabile replicarla al fine di seguire nel miglior modo possibile quanto indicato nel presente testo.
+[!NOTE]
+>Per compilare ed eseguire direttamente i listati e gli snippet di codice creare la seguente struttura “parlante” di directory, posta a partire dalla directory *home* del sistema operativo scelto (per noi sarà GNU/Linux): `MY_C_SOURCES`, `MY_C_BINARIES`, `MY_C_OBJECTS`, `MY_C_INCLUDE`, `MY_C_STATIC_LIBRARIES`, `MY_C_SHARED_LIBRARIES`, `MY_C_FILES`. Tale struttura non è obbligatoria ma è consigliabile replicarla al fine di seguire nel miglior modo possibile quanto indicato nel presente testo.
 
 ---
 
-###### Listato G.1 (HelloWorld.c)
+###### Listato G.1 (HelloWorld.c).
 
 ```c
 /* HelloWorld.c :: Stampa un semplice messaggio :: */ 
@@ -27,7 +27,7 @@ Apriamo una shell, posizioniamoci nella directory `MY_C_SOURCES`, dove avremo co
 
 ---
 
-###### Shell G.1 Compilazione di HelloWorld.c
+###### Shell G.1 Compilazione di HelloWorld.c.
 
 ```bash
 [thp@localhost MY_C_SOURCES]$ gcc -std=c23 -Wall HelloWorld.c -o $HOME/MY_C_BINARIES/HelloWorld
@@ -40,7 +40,7 @@ Posizioniamoci, quindi, nella directory `MY_C_BINARIES` e digitiamo il nome del 
 
 ---
 
-###### Shell G.2 Esecuzione di HelloWorld
+###### Shell G.2 Esecuzione di HelloWorld.
 
 ```bash
 [thp@localhost MY_C_BINARIES]$ ./HelloWorld
@@ -50,7 +50,7 @@ Posizioniamoci, quindi, nella directory `MY_C_BINARIES` e digitiamo il nome del 
 
 ---
 
-###### Output G.1 Esecuzione della Shell G.2
+###### Output G.1 Esecuzione della Shell G.2.
 
 ```bash
 Hello, C programmers!
@@ -62,7 +62,7 @@ Vediamo ora come compilare più file sorgente dividendo il nostro programma nei 
 
 ---
 
-###### Listato G.2 (HelloWorldM.c)
+###### Listato G.2 (HelloWorldM.c).
 
 ```c
 /* HelloWorldM.c :: Stampa un semplice messaggio :: */
@@ -80,7 +80,7 @@ int main(void)
 
 ---
 
-###### Listato G.3 (ShowMessage.h)
+###### Listato G.3 (ShowMessage.h).
 
 ```c
 #ifndef SHOWMESSAGE_H
@@ -95,7 +95,7 @@ void showMessage(const char *);
 
 ---
 
-###### Listato G.4 (ShowMessage.c)
+###### Listato G.4 (ShowMessage.c).
 
 ```c
 #include <stdio.h>
@@ -111,7 +111,7 @@ void showMessage(const char *message)
 
 ---
 
-###### Shell G.3 Compilazione di HelloWorldM.c e ShowMessage.c
+###### Shell G.3 Compilazione di HelloWorldM.c e ShowMessage.c.
 
 ```bash
 [thp@localhost MY_C_SOURCES]$ gcc -std=c23 -Wall HelloWorldM.c ShowMessage.c -o $HOME/MY_C_BINARIES/HelloWorldM
@@ -124,7 +124,7 @@ Digitiamo poi da `MY_C_BINARIES` `HelloWorldM` per mandare in esecuzione il rela
 
 ---
 
-###### Output G.2 Esecuzione di HelloWorldM
+###### Output G.2 Esecuzione di HelloWorldM.
 
 ```bash
 Hello, everybody!
@@ -135,11 +135,11 @@ Hello, everybody!
 La seguente invocazione di `gcc` (Shell G.4) che fa uso dell’opzione `-c` consente invece di creare dei file oggetto con estensione `.o` dai file sorgente `HelloWorldM.c` e `ShowMessage.c`.
 
 [!NOTE]
-Se si omette l’indicazione dell’output dove creare un file oggetto con l’opzione `-o`, allora il compilatore, in automatico, lo creerà nella stessa directory del file sorgente relativo con il nome di quest’ultimo e l’estensione `.o`.
+>Se si omette l’indicazione dell’output dove creare un file oggetto con l’opzione `-o`, allora il compilatore, in automatico, lo creerà nella stessa directory del file sorgente relativo con il nome di quest’ultimo e l’estensione `.o`.
 
 ---
 
-###### Shell G.4 Creazione di HelloWorldM.o e ShowMessage.o
+###### Shell G.4 Creazione di HelloWorldM.o e ShowMessage.o.
 
 ```bash
 [thp@localhost MY_C_SOURCES]$ gcc -std=c23 -Wall -c HelloWorldM.c -o $HOME/MY_C_OBJECTS/HelloWorldM.o &&
@@ -152,7 +152,7 @@ I file oggetto `HelloWorldM.o` e `ShowMessage.o` possono poi essere combinati in
 
 ---
 
-###### Shell G.5 Creazione di HelloWorldM da HelloWorldM.o e ShowMessage.o
+###### Shell G.5 Creazione di HelloWorldM da HelloWorldM.o e ShowMessage.o.
 
 ```bash
 [thp@localhost MY_C_OBJECTS]$ gcc -std=c23 HelloWorldM.o ShowMessage.o -o $HOME/MY_C_BINARIES/HelloWorldM

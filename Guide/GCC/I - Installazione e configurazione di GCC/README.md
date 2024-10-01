@@ -36,7 +36,7 @@ Per utilizzare GCC in ambiente macOS dobbiamo eseguire i seguenti passi da una s
 - Verifichiamo la corrente versione di GCC con il comando `gcc --version` che dovrà mostrare come output qualcosa come: `gcc-14 (Homebrew GCC 14.1.0)`.
 
 [!NOTE]
-Quando si installano gli *strumenti per sviluppatori da riga di comando* viene in automatico installato il compilatore C/C++ Apple Clang e sono anche impostati dei link simbolici che “nascondono” `gcc` e che redirigono le chiamate da tale compilatore in favore del compilatore Apple Clang. Per invocare dunque correttamente il compilatore `gcc` possiamo fare semplicemente e direttamente quanto segue.
+>Quando si installano gli *strumenti per sviluppatori da riga di comando* viene in automatico installato il compilatore C/C++ Apple Clang e sono anche impostati dei link simbolici che “nascondono” `gcc` e che redirigono le chiamate da tale compilatore in favore del compilatore Apple Clang. Per invocare dunque correttamente il compilatore `gcc` possiamo fare semplicemente e direttamente quanto segue.
 
 - Scopriamo la versione di `gcc` installata con il comando `brew info gcc` che produrrà qualcosa come `gcc : stable 14.1.0`.
 - Invochiamo il compilatore con il suo nome e come suffisso scriviamo le prime cifre del numero di versione prima rilevato; per esempio `gcc-14 --version` produrrà l’invocazione corretta di `gcc` e non di `clang`.
