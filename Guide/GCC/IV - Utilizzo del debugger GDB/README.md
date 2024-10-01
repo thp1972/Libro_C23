@@ -4,7 +4,7 @@ Il *debugging* è, nella sostanza, un procedimento che consente di esaminare un�
 
 Dato il programma seguente (Listato G.1), vediamo i passi necessari per attivare ed eseguire una sessione di debugging.
 
-[!NOTE]
+>[!NOTE]
 >Nel nostro caso il programma non conterrà errori ma lo stesso ci sarà comunque utile per vedere, seppur brevemente, come usare un debugger.
 
 ---
@@ -87,7 +87,7 @@ Breakpoint 1, main () at Debugging.c:14
 
 ```
 
-[!NOTE]
+>[!NOTE]
 >Se l'avvio del comando `run` mostra la seguente informazione rispondete `y`:
 
 ``This GDB supports auto-downloading debuginfo from the following URLs: <https://debuginfod.fedoraproject.org/> Enable debuginfod for this session? (y or [n])``
@@ -251,7 +251,7 @@ makeSum (a=0x7fffffffdd08, b=0x7fffffffdd04) at Debugging.c:9
 (gdb)...
 ```
 
-[!NOTE]
+[!IMPORTANT]
 >Prima di digitare `watch sum` dovete eseguire, in successione, i seguenti comandi in `gdb`: `break 14`, `run` e `step 2`.
 
 ---

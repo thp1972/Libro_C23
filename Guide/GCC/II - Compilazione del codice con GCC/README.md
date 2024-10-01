@@ -2,7 +2,7 @@
 
 Per questo tutorial sulla fase di compilazione useremo un canonico listato che stamperà a video il messaggio `Hello, C programmers!` (Listato G.1).
 
-[!NOTE]
+>[!NOTE]
 >Per compilare ed eseguire direttamente i listati e gli snippet di codice creare la seguente struttura “parlante” di directory, posta a partire dalla directory *home* del sistema operativo scelto (per noi sarà GNU/Linux): `MY_C_SOURCES`, `MY_C_BINARIES`, `MY_C_OBJECTS`, `MY_C_INCLUDE`, `MY_C_STATIC_LIBRARIES`, `MY_C_SHARED_LIBRARIES`, `MY_C_FILES`. Tale struttura non è obbligatoria ma è consigliabile replicarla al fine di seguire nel miglior modo possibile quanto indicato nel presente testo.
 
 ---
@@ -134,7 +134,7 @@ Hello, everybody!
 
 La seguente invocazione di `gcc` (Shell G.4) che fa uso dell’opzione `-c` consente invece di creare dei file oggetto con estensione `.o` dai file sorgente `HelloWorldM.c` e `ShowMessage.c`.
 
-[!NOTE]
+>[!NOTE]
 >Se si omette l’indicazione dell’output dove creare un file oggetto con l’opzione `-o`, allora il compilatore, in automatico, lo creerà nella stessa directory del file sorgente relativo con il nome di quest’ultimo e l’estensione `.o`.
 
 ---

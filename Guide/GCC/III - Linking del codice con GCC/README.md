@@ -70,7 +70,7 @@ Ciò fatto `gcc` ci segnala, però, il seguente ulteriore problema: `undefined r
 - estendendone il percorso di ricerca tramite l’opzione `-L` che ha la sintassi `-Ldir`, dove `dir` esprime la directory da aggiungere al consueto path;
 - specificando il file di libreria da scansionare mediante l’opzione `-l` che ha la sintassi `-llibrary`, dove `library` esprime la libreria da utilizzare (nel caso di GCC e di sistemi Unix-like una libreria statica viene creata con un nome che ha un prefisso `lib`, un nome e un suffisso `.a`, mentre nel caso di MinGW-w64 e di sistemi Windows una libreria statica viene creata con un nome e un suffisso `.lib`; in ambedue i casi il nome della libreria da fornire all’opzione `-l` viene indicato senza prefisso e suffisso).
 
-[!NOTE]
+>[!NOTE]
 >Ricordiamo che i file di libreria `MyMath.lib` (per Windows) e `libMyMath.a` (per sistemi Unix-like) forniti devono trovarsi nella directory `MY_C_STATIC_LIBRARIES`.
 
 ###### Shell G.2 Compilazione di Operations.c.
@@ -98,7 +98,7 @@ Ciò fatto possiamo eseguire il file `Operations` (o `Operations.exe`) dal perco
 La nostra libreria matematica ha anche una *versione* dinamica. In questo caso i comandi di compilazione saranno gli stessi eccetto la specifica del percorso di ricerca delle librerie dinamiche (`MY_C_SHARED_LIBRARIES`).
 Per quanto attiene all’opzione `-llibrary`, nel caso di GCC e di sistemi Unix-like, una libreria dinamica viene creata con un nome che ha un prefisso `lib`, un nome e un suffisso `.so`, mentre nel caso di MinGW-w64 e di sistemi Windows una libreria dinamica viene creata con un nome e un suffisso `.dll`; in ambedue i casi il nome della libreria da fornire all’opzione `-l` viene indicato senza prefisso e suffisso.
 
-[!NOTE]
+>[!NOTE]
 >Ricordiamo che i file di libreria `MyMath.dll` (per Windows) e `libMyMath.so` (per GNU/Linux o macOS) forniti devono trovarsi nella directory `MY_C_SHARED_LIBRARIES`.
 
 ###### Shell G.3 Compilazione di Operations.c.
@@ -111,7 +111,7 @@ Per quanto attiene all’opzione `-llibrary`, nel caso di GCC e di sistemi Unix-
 
 In più, però, in questo caso, prima di mandare in esecuzione il file eseguibile `Operations` (o `Operations.exe`), dobbiamo fornire al *loader* il percorso di ricerca della nostra libreria dinamica perché la stessa non si trova in alcun percorso standard (in caso contrario verrà generato il seguente errore di compilazione: `error while loading shared libraries: libMyMath.so: cannot open shared object file: No such file or directory`).
 
-[!NOTE]
+>[!NOTE]
 >Le librerie dinamiche e quelle statiche sono poste entrambe nei path prima indicati. Quando il compilatore `gcc` deve linkare una libreria sceglierà sempre quella dinamica (se presente). Nel nostro caso abbiamo posto le librerie dinamiche e le librerie statiche in percorsi differenti solo per ragioni di maggiore chiarezza didattica.
 
 Il modo più semplice è quello di impostare la variabile di ambiente `LD_LIBRARY_PATH` (per i sistemi Unix-like) o Path (per i sistemi Windows) aggiungendo il percorso di ricerca della libreria condivisa (per semplicità la renderemo attiva per la sola corrente sessione di shell):
@@ -123,7 +123,7 @@ Il modo più semplice è quello di impostare la variabile di ambiente `LD_LIBRAR
 
 Per il sistema GCC, la trasformazione del codice sorgente in codice eseguibile è, di fatto, un processo a più fasi dove sono coinvolti più strumenti: il preprocessore (`cpp`, *The C Preprocessor*), il compilatore (`gcc`, *GNU project C and C++ compiler*), l’assemblatore (`as`, *the portable GNU assembler*) e il linker (`ld`, *The GNU linker*).
 
-[!INFO]
+>[!INFO]
 >L’insieme degli strumenti utilizzati durante la fase di trasformazione del codice sorgente in codice eseguibile è conosciuto con il termine di *toolchain*.
 
 Un’invocazione di `gcc` esegue automaticamente tutti i tool citati, e ciascuno esegue la relativa elaborazione: il preprocessore, per esempio, espande le macro e include i file header; il compilatore trasforma il codice sorgente in codice proprio del linguaggio assembly; l’assemblatore trasforma il codice in linguaggio assembly in codice macchina; il linker crea il codice eseguibile finale.
