@@ -251,7 +251,7 @@ makeSum (a=0x7fffffffdd08, b=0x7fffffffdd04) at Debugging.c:9
 (gdb)...
 ```
 
-[!IMPORTANT]
+>[!IMPORTANT]
 >Prima di digitare `watch sum` dovete eseguire, in successione, i seguenti comandi in `gdb`: `break 14`, `run` e `step 2`.
 
 ---
