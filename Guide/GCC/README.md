@@ -15,10 +15,10 @@ GCC, quindi, allo stato attuale, offre il supporto non solo per il linguaggio C 
 
 GCC dispone inoltre di diversi back end che permettono di generare linguaggio macchina per molte architetture hardware quali x86, x86-64, ARM, PowerPC, SPARC e così via. In definitiva la suite GCC è oggi, di sicuro, lo stato dell’arte nell’ambito dei compilatori grazie alla sua robustezza, portabilità, modularità e conformità tempestiva agli standard, ma anche in virtù del fatto di essere free software (è distribuito sotto licenza GPL), con ciò consentendo a chiunque di utilizzare i meravigliosi strumenti di programmazione offerti.
 
-[Installazione e configurazione di GCC](I%20-%20Installazione%20e%20configurazione%20di%20GCC/README.md)
+[Installazione e configurazione di GCC](I__Installazione_e_configurazione_di_GCC/README.md)
 
-[Compilazione del codice con GCC](II%20-%20Compilazione%20del%20codice%20con%20GCC/README.md)
+[Compilazione del codice con GCC](II__Compilazione_del_codice_con_GCC/README.md)
 
-[Linking del codice con GCC](III%20-%20Linking%20del%20codice%20con%20GCC/README.md)
+[Linking del codice con GCC](III__Linking_del_codice_con_GCC/README.md)
 
-[Utilizzo del debugger GDB](IV%20-%20Utilizzo%20del%20debugger%20GDB/README.md)
+[Utilizzo del debugger GDB](IV__Utilizzo_del_debugger_GDB/README.md)
