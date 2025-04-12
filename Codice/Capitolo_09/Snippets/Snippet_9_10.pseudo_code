@@ -1,0 +1,31 @@
+Function foo()
+{
+    var x = 10;
+    var k = 20;
+
+    Function bar()
+    {
+        var z = x;
+        var k = 1000;
+
+        // scope dinamico = 10; scope statico = 10 
+        print(z);
+        foobar();
+    }
+
+    Function baz()
+    {
+        var j = k;
+
+        // scope dinamico = 10; scope statico = 20 
+        print(j);
+    }
+
+    Function foobar()
+    {
+        var k = 10;
+        baz();
+    }
+
+    bar();
+}(); // self-invoking...

@@ -20,5 +20,3 @@ GCC dispone inoltre di diversi back end che permettono di generare linguaggio ma
 [Compilazione del codice con GCC](II__Compilazione_del_codice_con_GCC/README.md)
 
 [Linking del codice con GCC](III__Linking_del_codice_con_GCC/README.md)
-
-[Utilizzo del debugger GDB](IV__Utilizzo_del_debugger_GDB/README.md)
